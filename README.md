@@ -11,7 +11,7 @@ npm install
 ```
 
 
-## 3. `npm run dev`
+## 2. `npm run dev`
 
 `npm run dev`でローカルサーバーを立ち上げます。
 
@@ -20,5 +20,5 @@ npm run dev
 ```
 
 
-## 4. 講座で使用したコード
+## 3. 講座で使用したコード
 講座で使用したコードは、`practice`配下のコードになります。
