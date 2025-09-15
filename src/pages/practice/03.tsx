@@ -1,22 +1,17 @@
 import { NextPage } from "next";
-import { useState } from "react";
 
 
 import Button from "@/components/common/parts/Button";
+import { useTextShowHidden } from "@/hooks/useTextShowHidden";
 
 
 
 const Page: NextPage = () => {
 
-  const [isHidden, setIsHidden] = useState(false);
+  const {isHidden, handleClickIndicate,handleClickHidden} = useTextShowHidden();
 
-  const handleClickIndicate = () => {
-    setIsHidden(false);
-  };
 
-  const handleClickHidden = () => {
-    setIsHidden(true);
-  };
+
 
 
   return(
