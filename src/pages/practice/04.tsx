@@ -1,16 +1,13 @@
 import { NextPage } from "next";
-import { ChangeEvent, useState } from "react";
 
+import { useRealTimeText } from "@/hooks/useRealTimeText";
 
 const Page: NextPage = () => {
 
-  const [text, setText] = useState('');
-
-  const handleChangeText = (e:ChangeEvent<HTMLInputElement>) => {
-    setText(e.target.value);
-  };
+    const {text,handleChangeText} = useRealTimeText();
 
   return(
+    
     <div className="mx-auto mt-10 max-w-4xl">
         <div className="flex justify-center gap-x-4">
           <div>
