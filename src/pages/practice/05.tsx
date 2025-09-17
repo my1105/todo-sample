@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import { NextPage } from "next";
 
 import Button from "@/components/common/parts/Button";
@@ -16,7 +15,6 @@ const {changeColor,currentColorIndex} = useChangeBgColor();
       <div className="flex justify-center">
         <Button onClick={changeColor} label="色を変更" variant={"primary"} />
       </div>
-
     </div>
 );
 };
