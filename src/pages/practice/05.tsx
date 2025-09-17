@@ -1,28 +1,20 @@
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import { NextPage } from "next";
-import { useState } from "react";
 
 import Button from "@/components/common/parts/Button";
-
-
-
-const COLORS = ['lightblue','lightgreen','lightpink','white'];
+import { COLORS,useChangeBgColor } from "@/hooks/useChangeBgColor";
 
 
 const Page: NextPage = () => {
 
-  const [currentColorIndex, setcurrentColorIndex] = useState(0);
-
-  const changColor = () => {
-    setcurrentColorIndex((prevState) => (prevState + 1) % COLORS.length);
-  };
-
+const {changeColor,currentColorIndex} = useChangeBgColor();
 
 
   return(
     
     <div className="h-screen pt-8" style={{ backgroundColor: COLORS[currentColorIndex] }}>
       <div className="flex justify-center">
-        <Button onClick={changColor} label="色を変更" variant={"primary"} />
+        <Button onClick={changeColor} label="色を変更" variant={"primary"} />
       </div>
 
     </div>
