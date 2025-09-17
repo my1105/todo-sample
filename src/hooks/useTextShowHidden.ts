@@ -6,7 +6,7 @@ type useTextShowHidden = () => {
     handleClickHidden: () => void
 };
 
-export const useTextShowHidden = ()=> {
+export const useTextShowHidden: useTextShowHidden = () => {
     const [isHidden, setIsHidden] = useState(false);
   
     const handleClickIndicate = () => {
